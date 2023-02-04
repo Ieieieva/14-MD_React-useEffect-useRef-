@@ -1,0 +1,16 @@
+
+
+.task-two {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+}
+
+.box-from-task-two {
+  width: 200px;
+  height: 100px;
+  background-color: teal;
+  border-radius: 10px;
+}

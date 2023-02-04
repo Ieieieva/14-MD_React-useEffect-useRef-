@@ -1,0 +1,17 @@
+
+.fourth-form {
+  display: flex;
+  gap: 100px;
+  align-items: center;
+  justify-content: center;
+}
+
+.counter {
+  display: flex;
+  gap: 20px;
+  align-items: center;
+}
+
+.count-text {
+  font-size: 1.3rem;
+}

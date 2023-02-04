@@ -1,0 +1,15 @@
+
+.task-one {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+}
+
+.box-from-task-one {
+  width: 200px;
+  height: 100px;
+  background-color: teal;
+  border-radius: 10px;
+}
