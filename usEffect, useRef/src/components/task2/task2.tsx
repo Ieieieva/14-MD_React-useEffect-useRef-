@@ -2,13 +2,13 @@ import { useRef } from 'react'
 import './task2.css'
 
 export const TaskTwo = () => {
-  const boxElementRef = useRef(false)
+  const boxElementRef: any = useRef()
 
   const cloneElement = () => {
     if (boxElementRef.current) {
       const boxElement = boxElementRef.current
-      // const clone = boxElement.cloneNode(true)
-      // boxElement.parentNode?.appendChild(clone)
+      const clone = boxElement.cloneNode(true)
+      boxElement.parentNode?.appendChild(clone)
     }
   }
 
@@ -21,7 +21,7 @@ export const TaskTwo = () => {
         className="button"
         onClick={(e) => {
           e.preventDefault()
-          cloneElement
+          cloneElement()
         }}
       >
         Clone element

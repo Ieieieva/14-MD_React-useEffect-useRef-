@@ -4,10 +4,11 @@ import './fifth-form.css'
 export const FifthForm = () => {
   const [count, setCount] = useState(100);
   const [text, setText] = useState('');
+  const [textSize, setTextSize] = useState(16);
   const countRef = useRef<HTMLParagraphElement>(null)
 
   useEffect(() => {
-    document.title = `pamParamPamPamPam`;
+    document.title = `...`;
   }, []);
 
   return (
@@ -24,8 +25,9 @@ export const FifthForm = () => {
         type="button"
         onClick={() => {
           setCount(count + 1)
+          setTextSize(textSize + 1)
           if(countRef.current !== null) {
-            countRef.current.style.fontSize = `${26}px`;  //citu loģiku pie px vajag
+            countRef.current.style.fontSize = `${textSize}px`;
           }
         }}
         >

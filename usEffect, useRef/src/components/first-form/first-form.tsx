@@ -1,6 +1,4 @@
 import { useEffect, useRef, useState } from "react"
-import './first-form.css'
-
 
 export const FirstForm = () => {
   const [message, setMessage] = useState("");
@@ -14,8 +12,7 @@ export const FirstForm = () => {
   }, []);
 
   let array: string[] = []
-  const handleSubmit = (event: any) => {
-    event.preventDefault();
+  const handleSubmit = () => {
     array.push(message)
     setMessage('')
     setOutputMessage(
@@ -27,7 +24,10 @@ export const FirstForm = () => {
   return (
     <form
       className="form form-first" 
-      onSubmit={handleSubmit}
+      onSubmit={(e) => {
+        e.preventDefault()
+        handleSubmit()
+      }}
       >
       <label>
         <input 
@@ -44,9 +44,6 @@ export const FirstForm = () => {
       <button 
         type="submit"
         className="button"
-        // onSubmit={(e) => {
-        //   e.preventDefault()
-        // }}
         >
           Submit
       </button>
